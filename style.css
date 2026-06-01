@@ -31,13 +31,61 @@ nav a {
   font-weight: bold;
 }
 
+/* 🔹 Menú hamburguesa */
+nav {
+  position: relative;
+}
+
+/* menu amburgusa*/
+nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #2e7d32;
+    position: fixed;   /* fijo en pantalla */
+    top: 0;
+    left: -250px;      /* oculto fuera de vista a la IZQUIERDA */
+    height: 100%;
+    width: 200px;
+    padding: 20px;
+    transition: left 0.3s ease; /* animación */
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    left: 0; /* se desliza desde la izquierda */
+  }
+
+  nav ul li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
 /* Banner con imagen de fondo */
 .banner {
   position: relative;
-  background: url("int1.png") center/cover no-repeat;
+  background: url("picture/int1.png") center/cover no-repeat;
   color: rgb(255, 255, 255);
   text-align: center;
-  padding: 150px 20px;
+  padding: 100px 20px;
 }
 
 .banner::before {
@@ -66,7 +114,7 @@ nav a {
   display: flex;
   justify-content: space-around;
   margin: 20px;
-  flex-wrap: wrap; /* permite que se acomoden en móvil */
+  flex-wrap: wrap;
 }
 
 .card {
@@ -82,14 +130,15 @@ nav a {
 }
 
 .card.agua {
-  background: url("int5.png") center/cover no-repeat;
+  background: url("picture/int5.png") center/cover no-repeat;
 }
 .card.aire {
-  background: url("int2.png") center/cover no-repeat;
+  background: url("picture/int2.png") center/cover no-repeat;
 }
 .card.suelo {
-  background: url("int3.png") center/cover no-repeat;
+  background: url("picture/int3.png") center/cover no-repeat;
 }
+
 
 .card::before {
   content: "";
@@ -120,9 +169,9 @@ nav a {
   flex-wrap: wrap;
 }
 
-/* 🔹 Simulador con imagen de fondo */
+/* 🔹 Simulador */
 .simulador {
-  background: url("int6.png") center/cover no-repeat;
+  background: url("picture/int6.png") center/cover no-repeat;
   color: white;
   position: relative;
   border-radius: 8px;
@@ -142,9 +191,9 @@ nav a {
   z-index: 1;
 }
 
-/* 🔹 Materiales Educativos con imagen de fondo */
+/* 🔹 Materiales Educativos */
 .material {
-  background: url("int7.png") center/cover no-repeat;
+  background: url("picture/int7.png") center/cover no-repeat;
   color: white;
   position: relative;
   border-radius: 8px;
@@ -171,13 +220,8 @@ footer {
   padding: 10px;
 }
 
-/* 🔹 Responsivo para móviles */
+/* 🔹 Responsivo */
 @media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-
   .temas {
     flex-direction: column;
     align-items: center;
@@ -186,6 +230,7 @@ footer {
   .card {
     width: 80%;
   }
+
   .card img {
     width: 100%;
     height: 150px;
@@ -193,6 +238,7 @@ footer {
     border-radius: 8px;
     margin-bottom: 10px;
   }
+
   .recursos {
     flex-direction: column;
     align-items: center;
@@ -204,7 +250,7 @@ footer {
   }
 
   .banner {
-    padding: 60px 20px; /* menos alto en móvil */
+    padding: 60px 20px;
   }
 
   .banner h2 {
@@ -214,4 +260,5 @@ footer {
   .banner p {
     font-size: 1em;
   }
+  
 }
