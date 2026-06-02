@@ -14,6 +14,28 @@ if (btnSimulador) {
   });
 }
 
+// 🔹 Preguntas frecuentes (acordeón)
+const faqButtons = document.querySelectorAll(".faq-question");
+
+faqButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const answer = button.nextElementSibling;
+
+    // Cierra otras respuestas abiertas
+    document.querySelectorAll(".faq-answer").forEach(ans => {
+      if (ans !== answer) {
+        ans.style.maxHeight = null;
+      }
+    });
+
+    // Alterna la respuesta actual
+    if (answer.style.maxHeight) {
+      answer.style.maxHeight = null;
+    } else {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    }
+  });
+});
 
 
 
