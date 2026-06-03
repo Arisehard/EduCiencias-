@@ -82,7 +82,7 @@ nav {
 /* Banner con imagen de fondo */
 .banner {
   position: relative;
-  background: url("int1.png") center/cover no-repeat;
+  background: url("picture/int1.png") center/cover no-repeat;
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 100px 20px;
@@ -130,13 +130,13 @@ nav {
 }
 
 .card.agua {
-  background: url("int5.png") center/cover no-repeat;
+  background: url("picture/int5.png") center/cover no-repeat;
 }
 .card.aire {
-  background: url("int2.png") center/cover no-repeat;
+  background: url("picture/int2.png") center/cover no-repeat;
 }
 .card.suelo {
-  background: url("int3.png") center/cover no-repeat;
+  background: url("picture/int3.png") center/cover no-repeat;
 }
 
 
@@ -171,11 +171,11 @@ nav {
 
 /* 🔹 Simulador */
 .simulador {
-  background: url("int6.png") center/cover no-repeat;
+  background: url("picture/int6.png") center/cover no-repeat;
   color: white;
   position: relative;
   border-radius: 8px;
-  padding: 70px;
+  padding: 50px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 .simulador::before {
@@ -193,11 +193,11 @@ nav {
 
 /* 🔹 Materiales Educativos */
 .material {
-  background: url("int7.png") center/cover no-repeat;
+  background: url("picture/int7.png") center/cover no-repeat;
   color: white;
   position: relative;
   border-radius: 8px;
-  padding: 70px;
+  padding: 50px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 .material::before {
@@ -260,7 +260,6 @@ footer {
   .banner p {
     font-size: 1em;
   }
-  
 }
 
 
