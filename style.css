@@ -285,3 +285,40 @@ footer {
 }
 
 
+/*infografia*/
+
+.infografia-item {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.infografia-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.btn-descargar {
+  position: absolute;
+  top: 10px;       /* distancia desde arriba */
+  left: 10px;      /* distancia desde la izquierda */
+  background-color: rgba(255, 255, 255, 0.6); /* blanco semitransparente */
+  color: #2e7d32;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-descargar:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* más visible al pasar el mouse */
+}
+
+
+
+
+
+
+
