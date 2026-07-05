@@ -1,0 +1,326 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #2e7d32;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 🔹 Menú hamburguesa */
+nav {
+  position: relative;
+}
+
+/* menu amburgusa*/
+nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #2e7d32;
+    position: fixed;   /* fijo en pantalla */
+    top: 0;
+    left: -250px;      /* oculto fuera de vista a la IZQUIERDA */
+    height: 100%;
+    width: 200px;
+    padding: 20px;
+    transition: left 0.3s ease; /* animación */
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    left: 0; /* se desliza desde la izquierda */
+  }
+
+  nav ul li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+/* Banner con imagen de fondo */
+.banner {
+  position: relative;
+  background: url("picture/int1.png") center/cover no-repeat;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.banner h2,
+.banner p,
+.banner button {
+  position: relative;
+  z-index: 1;
+}
+
+.banner button {
+  background-color: #ffeb3b;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.temas {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  color: white;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card.agua {
+  background: url("picture/int5.png") center/cover no-repeat;
+}
+.card.aire {
+  background: url("picture/int2.png") center/cover no-repeat;
+}
+.card.suelo {
+  background: url("picture/int3.png") center/cover no-repeat;
+}
+
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 8px;
+}
+
+.card h3,
+.card button {
+  position: relative;
+  z-index: 1;
+}
+
+.card button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.recursos {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+/* 🔹 Simulador */
+.simulador {
+  background: url("picture/int6.png") center/cover no-repeat;
+  color: white;
+  position: relative;
+  border-radius: 8px;
+  padding: 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.simulador::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 8px;
+}
+.simulador h3,
+.simulador button {
+  position: relative;
+  z-index: 1;
+}
+
+/* 🔹 Materiales Educativos */
+.material {
+  background: url("picture/int7.png") center/cover no-repeat;
+  color: white;
+  position: relative;
+  border-radius: 8px;
+  padding: 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.material::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 8px;
+}
+.material h3,
+.material button {
+  position: relative;
+  z-index: 1;
+}
+
+footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* 🔹 Responsivo */
+@media (max-width: 768px) {
+  .temas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .recursos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recursos > div {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .banner {
+    padding: 60px 20px;
+  }
+
+  .banner h2 {
+    font-size: 1.5em;
+  }
+
+  .banner p {
+    font-size: 1em;
+  }
+}
+
+
+/* acordeon de preguntasas y respuestas */
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 10px;
+  background-color: #fff6f6;
+  border-left: 5px solid #2e7d32;
+}
+
+
+/*infografia*/
+
+.infografia-item {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.infografia-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.btn-descargar {
+  position: absolute;
+  top: 10px;       /* distancia desde arriba */
+  left: 10px;      /* distancia desde la izquierda */
+  background-color: rgba(19, 165, 14, 0.6); /* blanco semitransparente */
+  color: #e5fa2d;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-descargar:hover {
+  background-color: rgba(16, 143, 4, 0.9); /* más visible al pasar el mouse */
+}
+
+
+
+/*Video yotuube*/
+
+
+
+
+
