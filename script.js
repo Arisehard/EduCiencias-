@@ -2,8 +2,18 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('nav ul');
 
-menuToggle.addEventListener('click', () => {
+menuToggle.addEventListener('click', (event) => {
+  event.stopPropagation(); // evita que el clic se propague
   navMenu.classList.toggle('show');
+});
+
+// 🔹 Cerrar menú al hacer clic fuera
+document.addEventListener('click', (event) => {
+  if (navMenu.classList.contains('show') && 
+      !navMenu.contains(event.target) && 
+      !menuToggle.contains(event.target)) {
+    navMenu.classList.remove('show');
+  }
 });
 
 // Botón "Ir al Simulador"
@@ -36,8 +46,3 @@ faqButtons.forEach(button => {
     }
   });
 });
-
-
-
-
-
